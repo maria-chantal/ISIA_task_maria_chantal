@@ -17,6 +17,16 @@ public class Driver {
         } catch (DimensionesIncompatibles ex) {
             Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        Matriz mul1 = new Matriz(4, 3, true);
+        System.out.println("Primera matriz \n" + mul1);
+        Matriz mul2 = new Matriz(3, 4, true);
+        System.out.println("Segunda matriz \n" + mul2);
+        try {
+            System.out.println("Matriz resultante \n" + Matriz.multiplicarDosMatrices(mul1, mul2));
+        } catch (DimensionesIncompatibles ex) {
+            Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
