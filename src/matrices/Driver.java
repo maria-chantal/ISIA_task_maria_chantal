@@ -18,6 +18,11 @@ public class Driver {
             Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        Matriz traspuesta = new Matriz(3, 4, true);
+        System.out.println("Matriz original:  \n" + traspuesta);
+        System.out.println("Matriz traspuesta:  \n" + Matriz.traspuesta(traspuesta));
+        
+
         Matriz mul1 = new Matriz(4, 3, true);
         System.out.println("Primera matriz \n" + mul1);
         Matriz mul2 = new Matriz(3, 4, true);
