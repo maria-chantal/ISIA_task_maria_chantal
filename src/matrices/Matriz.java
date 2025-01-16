@@ -48,6 +48,21 @@ public class Matriz {
         return matrizResultante; 
     } 
 
+    public static Matriz traspuesta(Matriz matriz){
+        int filas = matriz.getDimension().height;
+        int columnas = matriz.getDimension().width;
+        Matriz matrizTraspuesta = new Matriz(columnas, filas, false);
+
+        for (int i = 0; i < filas; i++){
+            for (int j = 0; j < columnas; j++){
+                matrizTraspuesta.datos[i][j] = matriz.datos[j][i];
+            }
+        }
+
+        return matrizTraspuesta;
+    }
+
+
     @Override
     public String toString(){
         String ret = "";

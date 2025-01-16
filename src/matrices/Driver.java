@@ -17,6 +17,11 @@ public class Driver {
         } catch (DimensionesIncompatibles ex) {
             Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        Matriz traspuesta = new Matriz(3, 4, true);
+        System.out.println("Matriz original:  \n" + traspuesta);
+        System.out.println("Matriz traspuesta:  \n" + Matriz.traspuesta(traspuesta));
+        
     }
     
 }
