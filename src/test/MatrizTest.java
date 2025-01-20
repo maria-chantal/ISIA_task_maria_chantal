@@ -61,7 +61,7 @@ public class MatrizTest {
     }
 
     @Test
-    public void testTraspuestaProducto() throws DimensionesIncompatibles {
+    public void traspuestaProductoTest() throws DimensionesIncompatibles {
         Matriz a = new Matriz(3, 3, false);
         Matriz b = new Matriz(3, 3, false);
 
