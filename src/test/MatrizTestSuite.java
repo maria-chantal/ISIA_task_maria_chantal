@@ -1,12 +1,14 @@
 package test;
 
-import org.junit.platform.suite.api.SelectClasses;
-import org.junit.platform.suite.api.Suite;
 
-@Suite
-@SelectClasses({
-    MatrizTest.class
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+        MatrizTest.class
 })
+
 public class MatrizTestSuite {
-    
+
 }

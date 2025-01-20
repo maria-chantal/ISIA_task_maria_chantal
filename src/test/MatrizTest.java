@@ -1,20 +1,21 @@
 package test;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertThrows;
 import matrices.Matriz;
 import matrices.DimensionesIncompatibles;
 
 public class MatrizTest {
     @Test
-    void multiplicarDimensionesIncompatiblesTest() {
+    public void multiplicarDimensionesIncompatiblesTest() {
         Matriz a = new Matriz(3, 2, false);
         Matriz b = new Matriz(4, 3, false);
         assertThrows(DimensionesIncompatibles.class, () -> Matriz.multiplicarDosMatrices(a, b));
     }
 
     @Test
-    void multiplicar3x3Test() throws DimensionesIncompatibles {
+    public void multiplicar3x3Test() throws DimensionesIncompatibles {
         Matriz a = new Matriz(3, 3, false);
         Matriz b = new Matriz(3, 3, false);
 
@@ -33,7 +34,7 @@ public class MatrizTest {
     }
 
     @Test
-    void trasponer3x3Test(){
+    public void trasponer3x3Test(){
         Matriz a = new Matriz(3,3, false);
         int[][] datosA = {{46,8,25},{73,50,6},{31,7,10}};
         a.setDatos(datosA);
@@ -48,8 +49,8 @@ public class MatrizTest {
 
     }
 
-    @Test 
-    void traspuestaOriginal(){
+    @Test
+    public void traspuestaOriginal(){
         Matriz a = new Matriz(3,3, false);
         int[][] datosA = {{46,8,25},{73,50,6},{31,7,10}};
         a.setDatos(datosA);
