@@ -2,8 +2,7 @@ package matrices;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import matrices.DimensionesIncompatibles;
-import matrices.Matriz;
+
 
 public class Driver {
 
@@ -23,9 +22,9 @@ public class Driver {
         System.out.println("Matriz traspuesta:  \n" + Matriz.traspuesta(traspuesta));
         
 
-        Matriz mul1 = new Matriz(4, 3, true);
+        Matriz mul1 = new Matriz(3, 3, true);
         System.out.println("Primera matriz \n" + mul1);
-        Matriz mul2 = new Matriz(3, 4, true);
+        Matriz mul2 = new Matriz(3, 3, true);
         System.out.println("Segunda matriz \n" + mul2);
         try {
             System.out.println("Matriz resultante \n" + Matriz.multiplicarDosMatrices(mul1, mul2));

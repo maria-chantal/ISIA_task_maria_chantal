@@ -26,6 +26,15 @@ public class Matriz {
                     datos[i][j] = rnd.nextInt(100);
         }
     }
+
+    public int[][] getDatos() {
+        return datos;
+    }
+    
+    public void setDatos(int[][] datos) {
+        this.datos = datos;
+    }
+
     public Matriz(Dimension d, boolean inicializarAleatorio){
         this(d.height, d.width, inicializarAleatorio);
     }
@@ -49,12 +58,10 @@ public class Matriz {
     } 
     
     public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles {
-        // Verificar si las dimensiones son compatibles
         if (a.getDimension().width != b.getDimension().height) {
             throw new DimensionesIncompatibles("El número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz");
         }
     
-        // Dimensiones de la matriz resultante
         int filasA = a.getDimension().height;
         int columnasB = b.getDimension().width;
         int columnasA = a.getDimension().width;
@@ -63,7 +70,7 @@ public class Matriz {
         for (int i = 0; i < filasA; i++) {
             for (int j = 0; j < columnasB; j++) {
                 for (int k = 0; k < columnasA; k++) {
-                    matrizResultante.datos[i][j] += a.datos[k][i] * b.datos[j][k];
+                    matrizResultante.datos[i][j] += a.datos[i][k] * b.datos[k][j];
                 }
             }
         }
