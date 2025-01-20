@@ -50,7 +50,7 @@ public class MatrizTest {
     }
 
     @Test
-    public void traspuestaOriginal(){
+    public void traspuestaOriginalTest(){
         Matriz a = new Matriz(3,3, false);
         int[][] datosA = {{46,8,25},{73,50,6},{31,7,10}};
         a.setDatos(datosA);
